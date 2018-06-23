@@ -11,13 +11,12 @@ public class LottoSimulatorWithHashSet {
         Set<Integer> bilet2 = generatorBilet();
 
         int counter = 0;
-        int guessed = comparaDouaBilete(bilet1, bilet2);
 
-        while(guessed < numbersGuessed){
+
+        while(comparaDouaBilete(bilet1, bilet2) < numbersGuessed){
             bilet2=generatorBilet();
             counter++;
             System.out.println(counter);
-            guessed = comparaDouaBilete(bilet1, bilet2);
         }
 
         System.out.println("Avem un castigator ");
